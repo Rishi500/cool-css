@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --gradient: linear-gradient(
+                45deg,
+                #845ec2,
+                #d65db1,
+                #ff6f91,
+                #ff9671,
+                #ffc75f,
+                #f9f871
+            )
+        }
+
+        @keyframes animate-bg {
+            0%{
+                background-position: left;
+            }
+            100%{
+                background-position: right;
+            }
+        }
+        .text-container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 8rem;
+            background-image: var(--gradient);
+            background-size: 200%;
+            animation: animate-bg 5s ease-in-out infinite alternate;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        Hello World!
+    </div>
+</body>
+</html>
